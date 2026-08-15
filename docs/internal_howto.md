@@ -110,7 +110,7 @@ efficient path for us.
 
 ### Example: how an INVALID result looks in the client report
 
-Using the tool's own error-demo data (`demo/cameras_with_errors_demo.csv`)
+Using the tool's own test data (`test_data/cameras_with_errors_demo.csv`)
 as a stand-in, a "Cameras needing attention" section in the client report
 would look like this:
 
