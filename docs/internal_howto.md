@@ -109,6 +109,23 @@ efficient path for us.
   - Timeout → could be a genuinely slow/overloaded camera or network link;
     re-run with a longer `--capture-timeout` before flagging to the client.
 
+### Example: how an INVALID result looks in the client report
+
+Using the tool's own error-demo data (`demo/cameras_with_errors_demo.csv`)
+as a stand-in, a "Cameras needing attention" section in the client report
+would look like this:
+
+| Camera Name | Issue | What we need from you |
+|---|---|---|
+| Unreachable Host | We couldn't reach this camera's IP address on your network. | Please confirm the IP address is correct and that no firewall rule is blocking access from our device. |
+| Wrong Path | The camera responded, but the video path in the URL doesn't exist on the camera. | Could you confirm the correct streaming URL/path, or share the camera's make/model so we can look it up? |
+| Bad Hostname | The hostname provided doesn't resolve to any address. | Please confirm the hostname or IP address is correct. |
+
+This is only a reference for translating raw errors into client-friendly
+language — never send a client a report containing example/demo data.
+Always fill `docs/client_report_template.md` with that specific client's
+real results.
+
 ## 6. Extending the tool
 
 Kept intentionally simple. If a real need comes up:

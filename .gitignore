@@ -3,3 +3,4 @@ output_errors/
 __pycache__/
 *.pyc
 .DS_Store
+~$*

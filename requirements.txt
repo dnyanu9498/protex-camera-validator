@@ -1,8 +1,12 @@
-# No third-party Python packages required.
-# This tool only needs Python 3.9+ (standard library only) and the
-# `ffmpeg` command-line binary available on PATH.
+# camera_checker.py itself needs no third-party Python packages.
+# It only needs Python 3.9+ (standard library only) and the `ffmpeg`
+# command-line binary available on PATH.
 #
 # Install ffmpeg:
 #   macOS:   brew install ffmpeg
 #   Ubuntu:  sudo apt-get update && sudo apt-get install -y ffmpeg
 #   Windows: choco install ffmpeg   (or download from https://ffmpeg.org/download.html)
+#
+# docs/generate_client_report_docx.py is a separate, optional helper (not
+# needed to run the tool itself) that needs python-docx:
+#   pip install python-docx
