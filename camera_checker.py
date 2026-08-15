@@ -32,6 +32,7 @@ import logging
 import socket
 import subprocess
 import sys
+import textwrap
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -212,16 +213,28 @@ def write_reports(results: list[CameraResult], output_dir: Path) -> None:
 
 
 def print_summary(results: list[CameraResult]) -> None:
+    """Print an aligned text table of results, plus any protocol notes below it."""
+    name_w = max(len("Camera Name"), max((len(r.camera_name) for r in results), default=0))
+    status_w = len("STATUS")
+    detail_w = 60
+
+    def detail_for(r: CameraResult) -> str:
+        raw = r.screenshot_path if r.status == "VALID" else r.error
+        return textwrap.shorten(raw or "-", width=detail_w, placeholder="...")
+
+    header = f"{'CAMERA NAME'.ljust(name_w)}  {'STATUS'.ljust(status_w)}  {'SCREENSHOT / ERROR'.ljust(detail_w)}"
     print("\n=== Camera Scan Summary ===")
+    print(header)
+    print("-" * len(header))
     for r in results:
-        marker = "VALID  " if r.status == "VALID" else "INVALID"
-        print(f"[{marker}] {r.camera_name} ({r.url})")
-        if r.protocol_note:
-            print(f"          note:  {r.protocol_note}")
-        if r.status == "VALID":
-            print(f"          screenshot: {r.screenshot_path}")
-        else:
-            print(f"          error: {r.error}")
+        print(f"{r.camera_name.ljust(name_w)}  {r.status.ljust(status_w)}  {detail_for(r).ljust(detail_w)}")
+
+    notes = [(r.camera_name, r.protocol_note) for r in results if r.protocol_note]
+    if notes:
+        print("\nProtocol notes:")
+        for camera_name, note in notes:
+            print(f"  - {camera_name}: {note}")
+
     valid_count = sum(1 for r in results if r.status == "VALID")
     print(f"\n{valid_count}/{len(results)} cameras validated successfully.\n")
 
