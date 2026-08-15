@@ -48,9 +48,9 @@ Running the tool creates (under `--output-dir`, default `output/`):
   notes, error message, screenshot path, timestamp.
 - `scan.log` — detailed debug log of the whole run.
 
-Example results from a real run against the two URLs in the brief, plus a
-run against deliberately broken URLs to demonstrate error handling, are in
-`examples/`.
+Example results from a real run against the two URLs in the brief are in
+`examples/`. Deliberately broken test URLs and their results (used to
+demonstrate error handling) are kept separately in `demo/`.
 
 ## How it works (short version)
 
@@ -70,10 +70,13 @@ Full architecture notes are in `docs/internal_howto.md`.
 
 ## Testing error handling
 
-`cameras_with_errors_demo.csv` contains three intentionally broken URLs
+`demo/cameras_with_errors_demo.csv` contains three intentionally broken URLs
 (unreachable host, 404 path, unresolvable hostname) to demonstrate each
-failure mode:
+failure mode. This is test data only, kept separate from the real
+`cameras.csv` input:
 
 ```bash
-python3 camera_checker.py --input cameras_with_errors_demo.csv --output-dir output_errors
+python3 camera_checker.py --input demo/cameras_with_errors_demo.csv --output-dir demo/output_errors
 ```
+
+A saved result from this exact command is in `demo/results_error_demo.csv`.
