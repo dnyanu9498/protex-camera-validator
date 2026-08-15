@@ -12,7 +12,7 @@ result:
   - INVALID -> the reason (network unreachable, protocol/stream error, or
                timeout) is recorded so a support engineer can act on it.
 
-Design notes (kept deliberately simple, see docs/internal_howto.md):
+Design notes ( see docs/internal_howto.md):
   - Uses the `ffmpeg` CLI (via subprocess) to do the actual stream probing
     and frame grab. ffmpeg understands rtsp://, http:// and https:// MJPEG
     streams out of the box, so one tool covers both "real" RTSP cameras and
