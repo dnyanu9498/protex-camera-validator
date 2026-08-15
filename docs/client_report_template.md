@@ -16,8 +16,7 @@ be connected — details and next steps for each are below.
 | [Camera name] | ✅ Connected / ❌ Not connected | [Screenshot confirmed / see issue below] |
 
 *(Fill in one row per camera, pulling from the tool's `results.csv`. Attach
-the screenshot for any camera marked "Connected." See
-`docs/client_report_example.md` for a fully filled-in example.)*
+the screenshot for any camera marked "Connected.")*
 
 ## Cameras needing attention
 

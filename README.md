@@ -12,13 +12,8 @@ video, and produces:
 Built for the Protex AI take-home exercise (Technical Support & Solutions
 Engineer, Round 3). See `docs/` for:
 - `internal_howto.md` — how a Protex engineer runs this on future installs
-- `client_report_template.md` — reusable blank template for any client
-- `client_report_example.md` — this template filled in with the actual
-  results from the brief's two sample cameras (the real deliverable)
-- `client_report_example.docx` — the same report as a Word document, ready
-  to attach to an email (generated via `generate_client_report_docx.py`,
-  which needs `pip install python-docx` — this is separate from the main
-  tool, which has zero dependencies)
+- `client_report_template.md` — blank template used to write up the status
+  of a client's camera list after running the tool
 
 ## Quick start
 

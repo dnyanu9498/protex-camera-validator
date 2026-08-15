@@ -94,9 +94,8 @@ efficient path for us.
 
 - All `VALID` → attach `results.csv` and a couple of representative
   screenshots to the client-facing report (copy
-  `docs/client_report_template.md` and fill it in — see
-  `docs/client_report_example.md` for a worked example) and proceed with
-  the install.
+  `docs/client_report_template.md` and fill it in with that client's real
+  results) and proceed with the install.
 - Some `INVALID` → don't just forward the raw error to the client. Translate
   it:
   - Unreachable/DNS failure → ask the client to confirm the IP/hostname and
