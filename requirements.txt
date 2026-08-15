@@ -1,0 +1,8 @@
+# No third-party Python packages required.
+# This tool only needs Python 3.9+ (standard library only) and the
+# `ffmpeg` command-line binary available on PATH.
+#
+# Install ffmpeg:
+#   macOS:   brew install ffmpeg
+#   Ubuntu:  sudo apt-get update && sudo apt-get install -y ffmpeg
+#   Windows: choco install ffmpeg   (or download from https://ffmpeg.org/download.html)
