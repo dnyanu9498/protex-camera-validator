@@ -56,6 +56,25 @@ demonstrate error handling) are kept separately in `test_data/`.
 
 ## How it works (short version)
 
+```
+CSV list of camera URLs
+        │
+        ▼
+  Parse URL (scheme, host, port)
+        │
+        ▼
+  TCP reachability check ──── unreachable ──▶ INVALID (host/DNS error recorded)
+        │ reachable
+        ▼
+  ffmpeg: grab 1 frame ──────── fails/timeout ──▶ INVALID (ffmpeg error recorded)
+        │ succeeds
+        ▼
+  VALID — screenshot saved
+        │
+        ▼
+  results.csv / results.json / scan.log
+```
+
 1. Parse the URL and flag if it's HTTP(S) rather than true RTSP (a common
    client submission mistake — the two sample URLs in the brief are actually
    HTTP MJPEG streams, not RTSP).
