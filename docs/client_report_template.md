@@ -13,12 +13,11 @@ be connected — details and next steps for each are below.
 
 | Camera Name | Status | Notes |
 |---|---|---|
-| Exterior Street View | ✅ Connected | Screenshot confirmed, image looks clear |
-| Outside Junction | ✅ Connected | Screenshot confirmed, image looks clear |
+| [Camera name] | ✅ Connected / ❌ Not connected | [Screenshot confirmed / see issue below] |
 
-*(Replace the rows above with the actual results for this client, pulling
-from the tool's `results.csv`. Attach the screenshots for any camera marked
-"Connected.")*
+*(Fill in one row per camera, pulling from the tool's `results.csv`. Attach
+the screenshot for any camera marked "Connected." See
+`docs/client_report_example.md` for a fully filled-in example.)*
 
 ## Cameras needing attention
 

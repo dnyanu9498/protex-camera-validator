@@ -10,8 +10,11 @@ video, and produces:
 - A **CSV/JSON report** and a **log file** summarizing the run.
 
 Built for the Protex AI take-home exercise (Technical Support & Solutions
-Engineer, Round 3). See `docs/` for the internal how-to and the client-facing
-report template.
+Engineer, Round 3). See `docs/` for:
+- `internal_howto.md` — how a Protex engineer runs this on future installs
+- `client_report_template.md` — reusable blank template for any client
+- `client_report_example.md` — this template filled in with the actual
+  results from the brief's two sample cameras (the real deliverable)
 
 ## Quick start
 
