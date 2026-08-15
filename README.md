@@ -7,7 +7,7 @@ video, and produces:
 - A **screenshot** for every stream that works.
 - A **clear error reason** for every stream that doesn't (unreachable host,
   bad path/404, DNS failure, timeout, unsupported codec, etc).
-- A **CSV report** and a **log file** summarizing the run.
+- A **CSV/JSON report/** and a **log file** summarizing the run.
 
 Built for the Protex AI take-home exercise (Technical Support & Solutions
 Engineer, Round 3). See `docs/` for:
