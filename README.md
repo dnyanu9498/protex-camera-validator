@@ -1,6 +1,6 @@
 # Camera Stream Validator
 
-A small command-line tool that takes a list of client-supplied camera stream
+A command-line tool that takes a list of client-supplied camera stream
 URLs, checks whether each one is actually reachable and streaming valid
 video, and produces:
 
