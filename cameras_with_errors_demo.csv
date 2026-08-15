@@ -1,0 +1,4 @@
+camera_name,url
+Unreachable Host,http://10.255.255.1/nphMotionJpeg?Resolution=320x240&Quality=Standard
+Wrong Path,http://217.180.234.228/mjpg/does_not_exist.mjpg
+Bad Hostname,rtsp://this-host-does-not-exist.invalid/stream1
